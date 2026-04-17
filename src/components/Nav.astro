@@ -1,0 +1,186 @@
+---
+const { pathname } = Astro.url;
+
+const navLinks = [
+  { title: "Forside", href: "/" },
+  { title: "Kalender", href: "/kalender" },
+  { title: "Statistik", href: "/statistik" },
+  { title: "Om os", href: "/aboutus" },
+];
+---
+
+<header>
+  <div class="logo">
+    <a href="/">
+      <img src="/logo.png" alt="Logo" />
+    </a>
+  </div>
+
+  <nav id="nav">
+    <ul class="menu">
+      {
+        navLinks.map((link) => (
+          <li>
+            <a href={link.href} class={pathname === link.href ? "active" : ""}>
+              {link.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <button class="burger" id="burger" aria-label="Open menu">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+  </nav>
+</header>
+
+<script>
+  const burger = document.querySelector("#burger");
+  const nav = document.querySelector("#nav");
+  const links = document.querySelectorAll(".menu a");
+
+  burger?.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    nav?.classList.toggle("active");
+  });
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      burger?.classList.remove("active");
+      nav?.classList.remove("active");
+    });
+  });
+</script>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #000;
+    z-index: 10;
+  }
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li {
+    margin-right: 20px;
+  }
+
+  .menu li:last-child {
+    margin-right: 0;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px;
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: end;
+  }
+
+  .menu a:hover {
+    color: #ff0000;
+  }
+
+  .menu a.active {
+    color: hotpink;
+  }
+
+  .burger {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+  }
+
+  .burger .line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333333;
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+
+  .burger .line:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    .menu {
+      display: none;
+    }
+
+    .burger {
+      display: block;
+    }
+
+    .burger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger.active .line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    nav.active .menu {
+      display: block;
+      background-color: #ffffff;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 220px;
+      border-bottom: 1px solid #000;
+      z-index: 1;
+      padding: 10px 0;
+    }
+
+    nav.active .menu li {
+      margin: 0;
+    }
+
+    nav.active .menu a {
+      font-size: 24px;
+      padding: 15px 20px;
+      text-align: left;
+    }
+  }
+</style>
