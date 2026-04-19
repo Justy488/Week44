@@ -1,0 +1,19 @@
+/* .footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 2rem 3rem;
+}
+
+.footer-info {
+  justify-self: start;
+}
+
+.footer-logo {
+  justify-self: center;
+}
+
+.genveje {
+  justify-self: end;
+  text-align: right;
+} */
