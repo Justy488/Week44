@@ -1,33 +1,68 @@
-/* added to different color also for sections */
 :root {
   --second-text-color: #977851;
   --p-text-padding: 0 20px;
   --section-border: #977851;
+  --bg-color: #f7f3ed;
 }
 
-/* Text seperation */
 h2,
 h3 {
   color: var(--second-text-color);
 }
+
 h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 220px;
+  height: 1px;
+  background-color: var(--second-text-color);
+  margin-top: 0.75rem;
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  padding: var(--p-text-padding);
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+
+.second-sec {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}
+
+/* Logo-billede centreret i kolonnen */
+.sec-img {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-p {
-  padding: var(--p-text-padding);
-}
 
-/* Only for sections */
-.second-sec {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  border-color: var(--section-border);
-  border: 10px;
-}
-
-.sec-img {
+.sec-img img {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
 }
 
 .third-sec {
