@@ -1,0 +1,76 @@
+<section class="hero section-line">
+  <div class="container hero-grid">
+    <div class="hero-left">
+      <div class="hero-logo-bg"></div>
+      <h1 class="hero-brand"><img src="/pictures/uge44herologo.png" alt="" /></h1>
+    </div>
+    <div class="hero-right">
+      <img src="/pictures/uge44forside.png" alt="" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-left,
+  .hero-right {
+    min-height: 320px;
+  }
+
+  .hero-left {
+    background: #f3f3e7;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+  }
+
+  .hero-logo-bg {
+    position: absolute;
+    left: 2rem;
+    top: 3rem;
+    width: 120px;
+    height: 120px;
+    background: var(--blue);
+    border-radius: 20% 60% 20% 60%;
+    opacity: 0.9;
+  }
+
+  .hero-brand {
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-heading);
+    font-size: clamp(4rem, 10vw, 7rem);
+    font-weight: 500;
+    line-height: 0.8;
+    text-transform: lowercase;
+  }
+
+  .hero-left p {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #725734;
+  }
+
+  .hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    justify-content: right;
+  }
+  .container .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
