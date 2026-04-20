@@ -3,6 +3,7 @@
   --p-text-padding: 0 20px;
   --section-border: #977851;
   --bg-color: #f7f3ed;
+  --p-img01-padding: 0 40px;
 }
 
 h2,
@@ -70,6 +71,21 @@ p {
   max-width: 220px;
   width: 100%;
   height: auto;
+}
+
+.first-img img {
+  /* max-width: 220px; */
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+.third-img img {
+  max-width: 60%;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  padding: var(--p-img01-padding);
+  margin-left: 5rem;
 }
 
 .third-sec {
