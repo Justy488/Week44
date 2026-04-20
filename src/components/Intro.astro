@@ -1,0 +1,107 @@
+<section class="section section-line intro">
+  <div class="container intro-grid">
+    <div class="intro-content">
+      <h2 class="title">Vi er Uge 44</h2>
+      <p class="label">HVEM ER VI?</p>
+
+      <p>Foreningen Liv & Død arbejder for at skabe en mere åben og fælles samtale om døden, sorgen og minderne. Gennem den landsdækkende kampagne Uge 44 ønsker vi at undersøge, hvad det vil sige at leve med – og tale om – døden.</p>
+
+      <p>Vi tror på, at når vi skaber plads til disse samtaler, bliver vi bedre rustet til at håndtere livets svære og meningsfulde øjeblikke – sammen.</p>
+
+      <a href="/om-os" class="btn">Læs mere om os →</a>
+    </div>
+  </div>
+
+  <img src="/pictures/hourglassshape.png" alt="" class="decor-shape" />
+</section>
+
+<style>
+  .intro {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn {
+    display: inline-block;
+    border: 1px solid #5e4646;
+    padding: 0.8rem 1.5rem;
+    color: #5e4646;
+    border-radius: 30px;
+    text-decoration: none;
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .intro-content {
+    max-width: 700px;
+  }
+
+  .label {
+    margin: 2rem 0 0.8rem;
+    color: #805f34;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+  }
+
+  .intro-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+  .intro {
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 2rem;
+    background: white;
+  }
+
+  .intro-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+  }
+
+  .decor-shape {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 260px;
+    object-fit: cover;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  @media (min-width: 900px) {
+    .intro-grid {
+      grid-template-columns: 1fr 1frfr;
+      align-items: stretch;
+    }
+
+    .intro {
+      position: relative;
+      overflow: hidden;
+      padding: 4rem 2rem;
+      background: white;
+    }
+
+    .intro-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+    s .decor-shape {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+</style>
