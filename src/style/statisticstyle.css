@@ -2,6 +2,7 @@
 :root {
   --second-text-color: #977851;
   --p-text-padding: 0 20px;
+  --section-border: #977851;
 }
 
 /* Text seperation */
@@ -18,10 +19,15 @@ p {
   padding: var(--p-text-padding);
 }
 
-/* Only fr sections */
+/* Only for sections */
 .second-sec {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  border-color: var(--section-border);
+  border: 10px;
+}
+
+.sec-img {
 }
 
 .third-sec {
