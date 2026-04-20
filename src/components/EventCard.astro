@@ -1,0 +1,60 @@
+---
+const { title, image } = Astro.props;
+---
+
+<div class="event-card">
+  <img src={image} alt={title} />
+  <p>{title}</p>
+  <button>Tilmeld dig her</button>
+</div>
+
+<style>
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+  .event-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 16px;
+    width: 280px;
+  }
+
+  .event-card img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    height: 200px;
+  }
+  .event-card h3 {
+    font-size: 2rem;
+    font-weight: normal;
+    font-family: Georgia, serif;
+    margin: 0;
+  }
+
+  .event-card p {
+    font-size: 0.95rem;
+    color: #000000;
+    text-align: center;
+    margin: 0;
+  }
+
+  .event-card button {
+    border: 2px solid #b8965a;
+    background: transparent;
+    padding: 10px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #b8965a;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+</style>
