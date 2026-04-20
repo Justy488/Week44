@@ -14,12 +14,13 @@ import "../style/statisticstyle.css";
     <title>Statistic</title>
   </head>
   <body>
-    <header>
-      <Nav />
-    </header>
+    <Nav />
+
     <main>
+      <section class="header first-img img">
+        <img src="pictures/headerskrift.svg" alt="" />
+      </section>
       <section class="first-sec">
-        <h1>Statistic-side</h1>
         <div class="first-img img">
           <img src="/pictures/pizzaimg.svg" alt="Pizza" />
         </div>
@@ -29,7 +30,9 @@ import "../style/statisticstyle.css";
       </section>
 
       <section class="second-sec">
-        <div><img src="/pictures/Ellipse01.png" alt="" /></div>
+        <div class="first-img img">
+          <img src="/pictures/Ellipse01.png" alt="" />
+        </div>
         <div>
           <h3>Tanker om Døden</h3>
           <p>
@@ -96,7 +99,7 @@ import "../style/statisticstyle.css";
         </div>
       </section>
       <section class="fourth-sec">
-        <div class="third-img img">
+        <div class="fourth-img img">
           <img src="pictures/peoplegraf01.png" alt="" />
           <img src="pictures/peoplegraf02.png" alt="" />
         </div>
@@ -129,9 +132,10 @@ import "../style/statisticstyle.css";
         I hvilken grad mener du, at følgende udsagn er rigtigt: Døden er et tabu
         i nutidens Danmark?
       </h2>
+
       <section class="fifth-sec">
         <div>
-          <div class="first-img img">
+          <div class="third-img img">
             <img src="pictures/minipizzagraf01.png" alt="" />
           </div>
           <p>
@@ -145,9 +149,9 @@ import "../style/statisticstyle.css";
             når der bare er plads til den.
           </p>
         </div>
-        <div>
-          <div class="first-img img">
-            <img src="pictures/minipizzagraf02.png" alt="" />
+        <div class="pizza-space">
+          <div class="third-img img">
+            <img src="pictures/minipizzagraf03.png" alt="" />
           </div>
           <p>
             5% oplever slet ikke døden som et tabu. Og så er der de få, men
@@ -158,26 +162,32 @@ import "../style/statisticstyle.css";
         </div>
       </section>
       <section>
-        <div>
-          <!-- svg indsat af 49% -->
-          <img src="" alt="" />
+        <div class="third-sec">
+          <div class="third-img img pro-svg">
+            <!-- svg indsat af 49% -->
+            <img src="pictures/procent02.svg" alt="" />
+          </div>
+          <div class="third-space">
+            <div>
+              <p>
+                Næsten halvdelen af danskerne – 49% – mener, at døden i nogen
+                grad er et tabu i nutidens Danmark. Yderligere 19% mener, det er
+                et tabu i høj grad, og 7% i meget høj grad. Tilsammen betyder
+                det, at 3 ud af 4 danskere oplever døden som et tabu – i større
+                eller mindre omfang.
+              </p>
+              <p>
+                Og dog: Kun 1 ud af 4 placerer sig i den stærke ende af skalaen.
+                Billedet er altså ikke sort-hvidt. Døden er ikke et råbende tabu
+                – men den hviler som en stille, uudtalt grænse for mange af os.
+              </p>
+            </div>
+          </div>
         </div>
-        <div>
-          <p>
-            Næsten halvdelen af danskerne – 49% – mener, at døden i nogen grad
-            er et tabu i nutidens Danmark. Yderligere 19% mener, det er et tabu
-            i høj grad, og 7% i meget høj grad. Tilsammen betyder det, at 3 ud
-            af 4 danskere oplever døden som et tabu – i større eller mindre
-            omfang.
-          </p>
-          <p>
-            Og dog: Kun 1 ud af 4 placerer sig i den stærke ende af skalaen.
-            Billedet er altså ikke sort-hvidt. Døden er ikke et råbende tabu –
-            men den hviler som en stille, uudtalt grænse for mange af os.
-          </p>
+        <div class="first-img img">
+          <img src="pictures/oldwprocent.png" alt="" />
         </div>
-        <div><img src="" alt="" /></div>
-        <div>
+        <div class="last-p">
           <p>
             Det er præcis den grænse, Foreningen Liv & Død ønsker at flytte.
             Gennem den landsdækkende kampagne Uge 44 – Fokus på Døden samler vi

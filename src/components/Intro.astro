@@ -1,0 +1,117 @@
+<section class="section section-line intro">
+  <div class="container intro-grid">
+    <div class="intro-content">
+      <h2 class="title">Vi er Uge 44</h2>
+      <p class="label">HVEM ER VI?</p>
+
+      <p>
+        Foreningen Liv & Død arbejder for at skabe en mere åben og fælles samtale om døden, sorgen og minderne. Gennem den landsdækkende kampagne Uge 44 - Fokus på Døden samler vi mennesker på tværs af kultur, sundhed og læring for at undersøge, hvad
+        det vil sige at leve med - og tale om - døden.
+      </p>
+
+      <p>Vi tror på, at når vi skaber plads til disse samtaler, bliver vi bedre rustet til at håndtere livets svære og meningsfulde øjeblikke - sammen.</p>
+
+      <a href="/om-os" class="btn">Læs mere om os <span>→</span></a>
+    </div>
+  </div>
+
+  <img src="/pictures/hourglassshape.png" alt="" class="decor-shape" />
+</section>
+
+<style>
+  .intro {
+    position: relative;
+    overflow: hidden;
+    padding: 3.5rem 1.5rem 4rem;
+    background: #fff;
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .intro-content {
+    position: relative;
+    z-index: 2;
+    max-width: 420px;
+  }
+
+  .title {
+    font-size: 4rem;
+    line-height: 0.95;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+  }
+
+  .label {
+    margin-bottom: 1rem;
+    color: #9b7442;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .intro-content p {
+    font-size: 1rem;
+    line-height: 1.35;
+    margin-bottom: 1.5rem;
+    max-width: 360px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.9rem 1.3rem;
+    background: #c0dae0;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .decor-shape {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 380px;
+    height: auto;
+    max-height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  @media (min-width: 900px) {
+    .intro {
+      padding: 4rem 2rem;
+    }
+
+    .intro-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .intro-content {
+      max-width: 700px;
+    }
+
+    .title {
+      font-size: 5rem;
+      margin-bottom: 2rem;
+    }
+
+    .intro-content p {
+      max-width: 650px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .decor-shape {
+      right: 0;
+      top: 0;
+      width: 380px;
+      height: 100%;
+    }
+  }
+</style>

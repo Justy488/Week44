@@ -1,0 +1,49 @@
+---
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import EventCard from "../components/EventCard.astro";
+import "../style/kalender.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Kalender</title>
+  </head>
+
+  <body>
+    <Nav />
+    <main>
+      <section class="hero">
+        <h1>Kalender</h1>
+      </section>
+      <section class="intro">
+        <div class="intro-text">
+          <h2>Hvad er der i kalenderen?</h2>
+          <p>Vi tilbyder masse forskellige events i løbet af hele uge 44.</p>
+          <a href="/aboutus" class="btn-outline">Læs mere om os</a>
+        </div>
+        <div class="intro-calendar">
+          <!-- kalender kommer her -->
+        </div>
+      </section>
+
+      <section class="upcoming">
+        <h2>Kommende events</h2>
+        <div class="cards">
+          <EventCard title="Book club" image="/pictures/bogklub.svg" />
+          <EventCard title="Løbe Klubb" image="/pictures/løbeklubb.svg" />
+          <EventCard
+            title="Lanterne aften"
+            image="pictures/lanterneadften.svg"
+          />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

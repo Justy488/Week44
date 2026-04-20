@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+  border-inline: 0;
+}
 :root {
   --second-text-color: #977851;
   --p-text-padding: 0 20px;
@@ -6,10 +10,27 @@
   --p-img01-padding: 0 40px;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+
+  background: linear-gradient(
+    99deg,
+    #fffdf8 -2.96%,
+    #fffdf8 38.22%,
+    #fbfbe7 79.41%,
+    #fbfbe7 100%
+  );
+  border-bottom: 1.5px solid #977851;
+}
+
 h2,
 h3 {
   color: var(--second-text-color);
   padding: var(--p-text-padding);
+  padding-top: 1em;
+  margin-top: 2em;
 }
 
 h2 {
@@ -21,7 +42,7 @@ h2 {
   letter-spacing: 0.06em;
   font-size: clamp(1rem, 2vw, 1.15rem);
   line-height: 1.5;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 h2::after {
@@ -52,6 +73,7 @@ p {
   gap: 3rem;
   align-items: center;
   padding: 2rem 1.5rem;
+  border-bottom: 1.5px solid #977851;
 }
 /* .second-sec {
   display: flex;
@@ -84,23 +106,52 @@ p {
   width: 100%;
   height: auto;
   align-items: center;
+  justify-content: center;
+  /* padding: var(--p-img01-padding); */
+  margin-left: 10rem;
+}
+.fourth-img img {
+  max-width: 60%;
+  width: 100%;
+  height: auto;
+  align-items: center;
   padding: var(--p-img01-padding);
-  margin-left: 5rem;
+  margin-left: 3rem;
 }
 
 .third-sec {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin: 2em;
+}
+.third-space {
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1em;
+}
+.pizza-space {
+  margin: 2rem;
+}
+.pro-svg {
+  padding-top: 1em;
+  margin-top: 2em;
 }
 
 .fourth-sec {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1.5px solid #977851;
 }
 
 .fifth-sec {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1.5px solid #977851;
+}
+
+.last-p {
+  align-items: center;
+  padding: var(--p-text-padding);
+  margin: 5rem;
 }
 
 @media (min-width: 600px) {
@@ -118,5 +169,70 @@ p {
   }
   .footer {
     grid-area: 3 / span 6;
+  }
+}
+
+/* for responsiv mobil */
+@media (max-width: 768px) {
+  /* Alle grid-sektioner bliver enkelt kolonne */
+  .second-sec,
+  .third-sec,
+  .fourth-sec,
+  .fifth-sec {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+
+  /* På mobil: fourth-sec vender rækkefølge så tekst kommer før billeder */
+  .fourth-sec {
+    flex-direction: column-reverse;
+  }
+
+  /* Billeder fylder fuld bredde på mobil */
+  .third-img img,
+  .fourth-img img {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .first-img img {
+    width: 100%;
+  }
+
+  /* Logo centreret under teksten */
+  .sec-img {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .sec-img img {
+    max-width: 140px;
+  }
+
+  /* Fjern store marginer der ødelægger mobil */
+  .last-p {
+    margin: 1rem;
+    padding: var(--p-text-padding);
+  }
+
+  .pizza-space {
+    margin: 0.5rem 0;
+  }
+
+  /* h2 font lidt større på mobil så det er læseligt */
+  h2 {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Den store 49% sektion */
+  .third-sec .third-img.pro-svg {
+    margin-top: 0;
+    padding-top: 0;
   }
 }
