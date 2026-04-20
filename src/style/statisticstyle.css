@@ -1,0 +1,64 @@
+/* added to different color also for sections */
+:root {
+  --second-text-color: #977851;
+  --p-text-padding: 0 20px;
+  --section-border: #977851;
+}
+
+/* Text seperation */
+h2,
+h3 {
+  color: var(--second-text-color);
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  padding: var(--p-text-padding);
+}
+
+/* Only for sections */
+.second-sec {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-color: var(--section-border);
+  border: 10px;
+}
+
+.sec-img {
+}
+
+.third-sec {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.fourth-sec {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.fifth-sec {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 600px) {
+  .header {
+    grid-area: 1 / span 6;
+  }
+  .menu {
+    grid-area: 2 / span 1;
+  }
+  .content {
+    grid-area: 2 / span 4;
+  }
+  .facts {
+    grid-area: 2 / span 1;
+  }
+  .footer {
+    grid-area: 3 / span 6;
+  }
+}

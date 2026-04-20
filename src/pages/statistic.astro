@@ -1,5 +1,7 @@
 ---
-
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+import "../style/statisticstyle.css";
 ---
 
 <html lang="en">
@@ -12,38 +14,173 @@
     <title>Statistic</title>
   </head>
   <body>
-    <header></header>
+    <header>
+      <Nav />
+    </header>
     <main>
-      <section>
+      <section class="first-sec">
         <h1>Statistic-side</h1>
+        <img src="/pictures/pizzaimg.svg" alt="Pizza" />
         <h2>
           Oplevelser med at tale om eller dele dine tanker og følelser om døden?
         </h2>
-        <h3>Tanker om Døden</h3>
-        <p>
-          Nye tal viser, at flertallet af danskere faktisk kan tale om døden –
-          men at det for mange stadig kræver noget at åbne munden. Kun ca. hver
-          femte oplever, at det i høj grad er svært at tale om døden eller dele
-          tanker og følelser herom med andre. Og kun 15% siger, at det slet ikke
-          er svært. Det betyder, at over halvdelen af os befinder os et sted i
-          midten – vi kan godt, men det koster lidt.
-        </p>
-        <p>
-          Og der er forskel på kønnene: Dobbelt så mange kvinder som mænd siger,
-          at det er meget svært at tale om døden, mens mænd til gengæld oftere
-          mener, at det er mindre svært. Det er præcis den samtale, Foreningen
-          Liv & Død vil være med til at løfte. For selvom mange af os godt kan
-          tale om døden, er der stadig brug for et rum, hvor vi ikke behøver at
-          kæmpe os derhen – hvor det bare er naturligt. Gennem den landsdækkende
-          kampagne Uge 44 – Fokus på Døden samler vi mennesker på tværs af
-          kultur, sundhed og læring for at udforske, hvad det vil sige at leve
-          med – og tale om – døden. For når vi skaber plads til de svære
-          samtaler, bliver vi bedre rustet til livets mest meningsfulde
-          øjeblikke – sammen.
-        </p>
-        
+      </section>
+
+      <section class="second-sec">
+        <div>
+          <h3>Tanker om Døden</h3>
+          <p>
+            Nye tal viser, at flertallet af danskere faktisk kan tale om døden –
+            men at det for mange stadig kræver noget at åbne munden. Kun ca.
+            hver femte oplever, at det i høj grad er svært at tale om døden
+            eller dele tanker og følelser herom med andre. Og kun 15% siger, at
+            det slet ikke er svært. Det betyder, at over halvdelen af os
+            befinder os et sted i midten – vi kan godt, men det koster lidt.
+          </p>
+          <p>
+            Og der er forskel på kønnene: Dobbelt så mange kvinder som mænd
+            siger, at det er meget svært at tale om døden, mens mænd til gengæld
+            oftere mener, at det er mindre svært. Det er præcis den samtale,
+            Foreningen Liv & Død vil være med til at løfte. For selvom mange af
+            os godt kan tale om døden, er der stadig brug for et rum, hvor vi
+            ikke behøver at kæmpe os derhen – hvor det bare er naturligt. Gennem
+            den landsdækkende kampagne Uge 44 – Fokus på Døden samler vi
+            mennesker på tværs af kultur, sundhed og læring for at udforske,
+            hvad det vil sige at leve med – og tale om – døden. For når vi
+            skaber plads til de svære samtaler, bliver vi bedre rustet til
+            livets mest meningsfulde øjeblikke – sammen.
+          </p>
+        </div>
+        <div class="sec-img">
+          <img src="/pagelogo.png" alt="" />
+        </div>
+      </section>
+      <section class="third-sec">
+        <div>
+          <h3>Døden er svær at tale om for nogle</h3>
+          <p>
+            Når vi spørger danskerne, om de oplever det som svært at tale om
+            døden eller dele deres tanker og følelser herom, tegner der sig et
+            nuanceret billede.
+          </p>
+          <p>
+            37% – altså over en tredjedel – siger, at det i nogen grad er svært.
+            20% mener, det er svært i mindre grad, og 15% oplever det slet ikke
+            som svært. Tilsammen betyder det, at 72% af danskerne faktisk godt
+            kan tale om døden – om end det for manges vedkommende kræver lidt.
+          </p>
+
+          <img src="" alt="" />
+          <h3>Men langt fra svært for alle</h3>
+          <p>
+            Til gengæld svarer 15%, at det i høj grad er svært, og 7% siger, at
+            det er meget svært. Det er ikke et flertal – men det er heller ikke
+            få.
+          </p>
+          <p>
+            Det er netop de samtaler, Foreningen Liv & Død vil være med til at
+            gøre lettere. Gennem den landsdækkende kampagne Uge 44 – Fokus på
+            Døden samler vi mennesker på tværs af kultur, sundhed og læring –
+            for at undersøge, hvad det vil sige at leve med – og tale om –
+            døden. For vi tror på, at når vi skaber plads til disse samtaler,
+            bliver vi bedre rustet til at håndtere livets svære og meningsfulde
+            øjeblikke – sammen.
+          </p>
+        </div>
+      </section>
+      <section class="fourth-sec">
+        <div>
+          <img src="" alt="" />
+          <img src="" alt="" />
+        </div>
+        <div>
+          <h3>Jo ældre vi bliver, jo lettere taler vi om døden</h3>
+          <p>
+            Tallene er klare: Alder gør en forskel, når det kommer til at tale
+            om døden. Blandt de unge (18-34 år) oplever hele 12%, at det i meget
+            høj grad er svært at tale om eller dele tanker og følelser om døden
+            med andre. Blandt de ældste (70+) er det kun 2%. Det er seks gange
+            så mange unge som ældre, der kæmper allermest med samtalen om døden.
+          </p>
+          <p>
+            Billedet er entydigt: Jo ældre vi bliver, jo mere naturligt falder
+            samtalen om livets afslutning. De ældre svarer markant oftere, at
+            det slet ikke eller kun i mindre grad er svært – mens de yngre i
+            langt højere grad befinder sig i den svære ende af skalaen.
+          </p>
+          <p>
+            Måske har de ældre simpelthen haft flere samtaler – og opdaget, at
+            de ikke er så farlige endda. Det er præcis den erfaring, Foreningen
+            Liv & Død ønsker at give videre – gennem kampagnen Uge 44 – Fokus på
+            Døden. For når vi skaber plads til samtalen om døden, bliver vi alle
+            – ung som gammel – bedre rustet til livets svære øjeblikke – sammen.
+          </p>
+        </div>
+      </section>
+
+      <h2>
+        I hvilken grad mener du, at følgende udsagn er rigtigt: Døden er et tabu
+        i nutidens Danmark?
+      </h2>
+      <section class="fifth-sec">
+        <div>
+          <img src="" alt="" />
+          <p>
+            15% oplever kun i mindre grad døden som et tabu. For hver sjette
+            dansker er døden ikke noget, der føles svært at nærme sig. De taler
+            om den – i familien, med vennerne, med kollegerne.
+          </p>
+          <p>
+            De har fundet et sprog for det, der ellers kan være svært at sætte
+            ord på. Og de viser, at samtalen om døden sagtens kan finde sted –
+            når der bare er plads til den.
+          </p>
+        </div>
+        <div>
+          <img src="" alt="" />
+          <p>
+            5% oplever slet ikke døden som et tabu. Og så er der de få, men
+            vigtige 5% – dem for hvem døden slet ikke er et tabu. De taler åbent
+            og naturligt om livets afslutning, og de minder os om, at det er
+            muligt.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div>
+          <!-- svg indsat af 49% -->
+          <img src="" alt="" />
+        </div>
+        <div>
+          <p>
+            Næsten halvdelen af danskerne – 49% – mener, at døden i nogen grad
+            er et tabu i nutidens Danmark. Yderligere 19% mener, det er et tabu
+            i høj grad, og 7% i meget høj grad. Tilsammen betyder det, at 3 ud
+            af 4 danskere oplever døden som et tabu – i større eller mindre
+            omfang.
+          </p>
+          <p>
+            Og dog: Kun 1 ud af 4 placerer sig i den stærke ende af skalaen.
+            Billedet er altså ikke sort-hvidt. Døden er ikke et råbende tabu –
+            men den hviler som en stille, uudtalt grænse for mange af os.
+          </p>
+        </div>
+        <div><img src="" alt="" /></div>
+        <div>
+          <p>
+            Det er præcis den grænse, Foreningen Liv & Død ønsker at flytte.
+            Gennem den landsdækkende kampagne Uge 44 – Fokus på Døden samler vi
+            mennesker på tværs af kultur, sundhed og læring – for at undersøge,
+            hvad det vil sige at leve med – og tale om – døden. For vi tror på,
+            at når vi skaber plads til disse samtaler, bliver vi bedre rustet
+            til at håndtere livets svære og meningsfulde øjeblikke – sammen.
+          </p>
+          <h3></h3>
+          <p></p>
+          <p></p>
+        </div>
       </section>
     </main>
-    <footer></footer>
+    <Footer />
   </body>
 </html>
