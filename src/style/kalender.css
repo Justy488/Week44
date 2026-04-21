@@ -16,6 +16,7 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
+    border-bottom: 2px solid #d4c5b0;
 }
 
 .hero img {
@@ -53,7 +54,7 @@ h3{
 }
 
 p, a{
-    font-size: 1.6em;
+    font-size: 1.2em;
     line-height: 1.5em;
     font-family: "Raleway", sans-serif;
 }
@@ -64,7 +65,10 @@ p, a{
   align-items: center;
   padding: 60px 80px;
   gap: 40px;
+    border-bottom: 2px solid #d4c5b0;
+
 }
+
 
 /* KOMMENDE EVENTS */
 .upcoming {
@@ -106,6 +110,8 @@ p, a{
     border-radius: 12px;
 }
 
+
+
 /* KNAPPER */
 .btn-outline {
   display: inline-block;
@@ -122,6 +128,8 @@ p, a{
   font-size: 1rem;
   box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
 }
+
+
 
 .scroll-btn {
  display: inline-block;
@@ -140,8 +148,8 @@ p, a{
 }
 
 .event-section {
-  border-bottom: 4px solid #d4c5b0;
-  border-top: 4px solid #d4c5b0;;
+  border-top: 2px solid #d4c5b0;
+    border-bottom: 2px solid #d4c5b0;;
 }
 
 .event-section {
