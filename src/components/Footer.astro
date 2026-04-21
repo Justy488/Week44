@@ -8,9 +8,9 @@
       <a href="mailto:info@livogdoed.dk"> Info@livogdoed.dk </a>
       <p>CVR: 25441397 (Landsforeningen Liv&Død - Dansk Ligbrændingsforening)</p>
     </div>
-    <div class="footer-logo">
-      <!-- <img src="/public/pictures/uge44(footerlogo).png" />HAR BRUG FOR HJÆLP -->
-      <svg width="320" height="330" viewBox="0 0 320 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- <div class="footer-logo"> -->
+      <img class="footerlogo" src="/public/pictures/uge44(footerlogo).png" />
+      <!-- <svg width="320" height="330" viewBox="0 0 320 330" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M167.655 73.9243C172.909 93.5301 170.158 114.42 160.01 131.998C149.861 149.576 133.145 162.402 113.539 167.656C93.9335 172.909 73.0439 170.159 55.4658 160.01C37.8877 149.862 25.0612 133.146 19.8078 113.54L93.7315 93.7321L167.655 73.9243Z"
           fill="#C0DAE0"></path>
@@ -23,8 +23,8 @@
         <path
           d="M118.801 216.066L184.367 149.562H192.102L167.902 216.066H181.613L180.734 218.41H167.082L157.824 243.898H148.391L157.59 218.41H119.68L118.801 216.066ZM158.41 216.066L179.211 158.586L121.965 216.066H158.41ZM200.532 216.066L266.098 149.562H273.833L249.634 216.066H263.345L262.466 218.41H248.813L239.555 243.898H230.122L239.321 218.41H201.411L200.532 216.066ZM240.141 216.066L260.942 158.586L203.696 216.066H240.141Z"
           fill="black"></path>
-      </svg>
-    </div>
+      </svg> -->
+    <!-- </div> -->
     <div class="footer-2">
       <h3>Udvalgte Genveje</h3>
       <ul><a href="index.astro">Forside</a></ul>
@@ -36,48 +36,62 @@
 </footer>
 
 <style>
+  a {
+    position: relative;
+  }
+  a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;          
+  height: 1.5px;
+  background-color: #977851;
+  transition: 0.3s ease;
+  }
+  a:hover::after {
+  width: 100%;
+}
   .footer-section {
-    width: 100%;
-    height: 40vh;
+    width: auto;
+    height: :auto;
     background-color: #fffdf8;
-    line-height: 18px;
-    
+    line-height: 24px;
   }
   .footer-flex {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    flex-wrap: wrap;
     padding: 2rem;
     margin: 0 auto;
   }
 
   .footer-1 {
+
     justify-self: start;
-    /* width: 500px;
-    height: 90px; */
     color: #977851;
   }
   .footer-1 a {
-    /* text-decoration: none; */
     color: #977851;
   }
   .footer-1 p,
   a {
-    line-height: 10px;
+    line-height: 15px;
   }
 
-  .footer-logo {
+
+  .footerlogo {
+    width: 70%;
     justify-self: center;
   }
 
   .footer-2 {
+   
     justify-self: end;
     text-align: right;
     text-decoration: none;
     color: #977851;
-    /* width: 500px;
-    height: 90px; */
+    
   }
   .footer-2 a {
     text-decoration: none;
@@ -85,5 +99,12 @@
   }
   .footer-2 ul {
     line-height: 12px;
+  }
+  @media (min-width: 1024px) {
+    .footerlogo{
+      width: 60%;
+      justify-self: center;
+    }
+
   }
 </style>
