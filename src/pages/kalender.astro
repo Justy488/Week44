@@ -63,7 +63,7 @@ console.log(events);
         </div>
       </section>
 
-      <section class="upcoming">
+      <!-- <section class="upcoming">
         <h2 class="h2-hero">Kommende events</h2>
         <div class="cards">
           {
@@ -76,10 +76,26 @@ console.log(events);
             ))
           }
         </div>
+      </section> -->
+
+      <section class="upcoming">
+        <h2 class="h2-hero">Kommende events</h2>
+        <div class="cards">
+          {
+            events.map((event: any) => (
+              <EventCard
+                title={event.title}
+                image={event.image}
+                slug={event.slug}
+                sectionId={event.slug}
+              />
+            ))
+          }
+        </div>
       </section>
 
       <!-- LYSLØB -->
-      <section class="event-section">
+      <section class="event-section" id="lysløb">
         <img src="/pictures/blob-en.svg" class="blob" alt="" />
         <div class="event-text">
           <h2>Lysløb</h2>
@@ -100,7 +116,7 @@ console.log(events);
         </div>
       </section>
 
-      <section class="event-section reverse">
+      <section class="event-section reverse" id="lanterne-aften">
         <img src="/pictures/blob-en.svg" class="blob" alt="" />
         <div class="event-text">
           <h2>Lanterne aften</h2>
@@ -122,7 +138,7 @@ console.log(events);
         </div>
       </section>
 
-      <section class="event-section">
+      <section class="event-section" id="bog-klub">
         <img src="/pictures/blob-en.svg" class="blob" alt="" />
 
         <div class="event-text">

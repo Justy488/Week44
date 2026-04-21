@@ -1,5 +1,5 @@
 ---
-const { title, image, slug } = Astro.props;
+const { title, image, slug, sectionId } = Astro.props;
 ---
 
 <a href={"/events/" + slug} class="event-card-link">
@@ -7,6 +7,7 @@ const { title, image, slug } = Astro.props;
     <img src={image} alt={title} />
     <p>{title}</p>
     <button>Tilmeld dig her</button>
+    <a href={"/kalender#" + sectionId} class="scroll-btn">Les mer ↓</a>
   </div>
 </a>
 
