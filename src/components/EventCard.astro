@@ -1,14 +1,21 @@
 ---
-const { title, image } = Astro.props;
+const { title, image, slug, sectionId } = Astro.props;
 ---
 
-<div class="event-card">
-  <img src={image} alt={title} />
-  <p>{title}</p>
-  <button>Tilmeld dig her</button>
-</div>
+<a href={"/events/" + slug} class="event-card-link">
+  <div class="event-card">
+    <img src={image} alt={title} />
+    <p>{title}</p>
+    <button>Tilmeld dig her</button>
+    <a href={"/kalender#" + sectionId} class="scroll-btn">Les mer ↓</a>
+  </div>
+</a>
 
 <style>
+  .event-card-link {
+    text-decoration: none;
+    color: inherit;
+  }
   .cards {
     display: flex;
     flex-direction: row;
@@ -57,5 +64,11 @@ const { title, image } = Astro.props;
     color: #b8965a;
     font-size: 0.9rem;
     width: 100%;
+  }
+
+  .event-card button:hover {
+    background-color: #c0dae0;
+    border: 3px solid #fbfbe7;
+    color: #fbfbe7;
   }
 </style>

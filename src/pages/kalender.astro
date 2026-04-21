@@ -3,6 +3,18 @@ import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import EventCard from "../components/EventCard.astro";
 import "../style/kalender.css";
+
+const options = {
+  headers: {
+    apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ZXNteHl3ZW1pY2x3ZnVsdXVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY2ODMwMTQsImV4cCI6MjA5MjI1OTAxNH0.eVspxrT5Laql5WXa_08Iffs5lQBksCZWDWiZEFrnCX4",
+  },
+};
+
+const url = "https://itesmxywemiclwfuluuk.supabase.co/rest/v1/events";
+const response = await fetch(url, options);
+const events = await response.json();
+console.log(events);
 ---
 
 <html lang="en">
@@ -51,16 +63,39 @@ import "../style/kalender.css";
         </div>
       </section>
 
+      <!-- <section class="upcoming">
+        <h2 class="h2-hero">Kommende events</h2>
+        <div class="cards">
+          {
+            events.map((event) => (
+              <EventCard
+                title={event.title}
+                image={event.image}
+                slug={event.slug}
+              />
+            ))
+          }
+        </div>
+      </section> -->
+
       <section class="upcoming">
         <h2 class="h2-hero">Kommende events</h2>
         <div class="cards">
-          <EventCard title="Book club" image="/pictures/bogklub.svg" />
-          <EventCard title="Løbe Klubb" image="/pictures/løbeklub.svg" />
-          <EventCard title="Lanterne aften" image="pictures/lanterne.svg" />
+          {
+            events.map((event: any) => (
+              <EventCard
+                title={event.title}
+                image={event.image}
+                slug={event.slug}
+                sectionId={event.slug}
+              />
+            ))
+          }
         </div>
       </section>
+
       <!-- LYSLØB -->
-      <section class="event-section">
+      <section class="event-section" id="lysløb">
         <img src="/pictures/blob-en.svg" class="blob" alt="" />
         <div class="event-text">
           <h2>Lysløb</h2>
@@ -81,7 +116,7 @@ import "../style/kalender.css";
         </div>
       </section>
 
-      <section class="event-section reverse">
+      <section class="event-section reverse" id="lanterne-aften">
         <img src="/pictures/blob-en.svg" class="blob" alt="" />
         <div class="event-text">
           <h2>Lanterne aften</h2>
@@ -103,7 +138,7 @@ import "../style/kalender.css";
         </div>
       </section>
 
-      <section class="event-section">
+      <section class="event-section" id="bog-klub">
         <img src="/pictures/blob-en.svg" class="blob" alt="" />
 
         <div class="event-text">

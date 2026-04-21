@@ -7,6 +7,19 @@ import FollowUs from "../components/FollowUs.astro";
 import Stats from "../components/Stats.astro";
 import EventCard from "../components/EventCard.astro";
 import "../style/indexstyle.css";
+
+const options = {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0ZXNteHl3ZW1pY2x3ZnVsdXVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY2ODMwMTQsImV4cCI6MjA5MjI1OTAxNH0.eVspxrT5Laql5WXa_08Iffs5lQBksCZWDWiZEFrnCX4",
+  },
+};
+
+const url = "https://itesmxywemiclwfuluuk.supabase.co/rest/v1/events";
+const response = await fetch(url, options);
+const events = await response.json();
+console.log(events);
+---
+
 ---
 
 <html lang="da">
@@ -55,15 +68,14 @@ import "../style/indexstyle.css";
     <section class="upcoming">
       <h2 class="h2-hero">Kommende events</h2>
       <div class="cards">
-        <EventCard title="Book club" image="/pictures/bogklub.svg" />
-        <EventCard title="Løbe Klubb" image="/pictures/løbeklub.svg" />
-        <EventCard title="Lanterne aften" image="pictures/lanterne.svg" />
+        {events.map((event) => <EventCard title={event.title} image={event.image} slug={event.slug} />)}
       </div>
       <div class="eventbtn-center">
         <a href="/kalender" class="eventbtn">Gå til kalender</a>
       </div>
+
+      <FollowUs />
+      <Footer />
     </section>
-    <FollowUs />
-    <Footer />
   </body>
 </html>
