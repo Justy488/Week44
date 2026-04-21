@@ -9,9 +9,17 @@
 
 /* HERO */
 .hero {
-  text-align: center;
-  padding: 100px 20px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
+
+.hero img {
+  width: 100%;
+  display: block;
+}
+
+
 .hero h1 {
   font-size: 5rem;
   font-weight: normal;
@@ -19,40 +27,39 @@
 }
 
 
-.hero-image {
-    width: 100%;       
-    max-width: 500px;  
-    height: auto;      
-    display: block;    
-    margin: 0 auto;    
-} 
 
 /* TEXT*/
 
 .h2-hero{
-    font-size: 3em;
+    font-size: 5em;
     text-align: center;
+  
 }
 
-h2{
+h1, h2{
     font-size: 3em;
+    font-family: "Italiana", serif;
+     color: #977851;
 }
 
 h3{
     font-size: 2em;
+    font-family: "Poppins", sans-serif;
+    color: #977851;
 }
 
-p{
+p, a{
     font-size: 1.6em;
     line-height: 1.5em;
+    font-family: "Raleway", sans-serif;
 }
 /* TEXT*/
 
-.gradient-baggrund {
+/* .gradient-baggrund {
     background: linear-gradient(to right, #FFFDF8 0%, #FFFDF8 40%, #FBFBE7 80%, #FBFBE7 100%);
     padding: 20px;
-    border-radius: 8px; /* Valgfrit, hvis du vil have bløde hjørner */
-}
+    border-radius: 8px; 
+} */
 .intro {
   display: flex;
   justify-content: space-between;
@@ -64,14 +71,14 @@ p{
 /* KOMMENDE EVENTS */
 .upcoming {
   background-color: #fdf3e3;
-  /* padding: 60px 80px; */
+  padding: 60px 80px;
   text-align: left;
 }
 
 .event-section{
     display: flex;
     align-items: center;
-    padding: 60px 80px;
+    padding: 60px 60px;
     gap: 60px;
     background-color: #fdf8f2;
 }
@@ -80,16 +87,19 @@ p{
   text-align: right;
 }
 .event-section.reverse {
-  background-color: #d6e8e8;
   flex-direction: row-reverse;
 }
 .event-text {
   flex: 1;
 }
-.event-image{
-    flex: 1;
-    display: flex;
-    justify-content: center;
+
+
+.event-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 .event-image img{
@@ -101,17 +111,113 @@ p{
 /* KNAPPER */
 .btn-outline {
   display: inline-block;
-  border: 1px solid #b8965a;
-  padding: 10px 24px;
-  border-radius: 20px;
+  border: 5px solid #a8c0c8;
+  padding: 12px 60px;
+  border-radius: 30px;
   text-decoration: none;
-  color: #b8965a;
-  background: transparent;
+  color: #7a9dab;
+  background: #fdfbef;
   cursor: pointer;
   margin-top: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
 }
 
 .event-section {
   border-bottom: 4px solid #d4c5b0;
   border-top: 4px solid #d4c5b0;;
+}
+
+.event-section {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* BLOB*/
+.blob {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.event-text, .event-image {
+  position: relative;
+  z-index: 1;
+}
+
+
+.event-section.reverse .blob {
+  right: auto;
+  left: 0;
+  transform: scaleX(-1);
+}
+
+/* MOBIL */
+@media (max-width: 799px) {
+  .intro {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .upcoming {
+    padding: 24px;
+  }
+
+  .event-section {
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .event-section.reverse {
+    flex-direction: column;
+  }
+
+  .event-section.reverse .event-text {
+    text-align: left;
+  }
+
+  h1, h2 {
+    font-size: 2em;
+  }
+
+  .h2-hero {
+    font-size: 2.5em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  p, a {
+    font-size: 1em;
+  }
+
+  .btn-outline {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+  }
+
+  .event-image img {
+    max-width: 100%;
+  }
+
+  .filter {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+  }
 }

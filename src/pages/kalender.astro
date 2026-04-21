@@ -7,23 +7,28 @@ import "../style/kalender.css";
 
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Kalender</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&family=Poppins:wght@400;600&family=Raleway:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <Nav />
     <main>
-      <div class="gradient-baggrund">
-        <section class="hero">
-          <img src="/public/pictures/hero-kalender.svg" class="hero-image" />
-        </section>
-      </div>
+      <section class="hero">
+        <img src="/pictures/forside-billede.svg" alt="hero" />
+      </section>
+
       <section class="intro">
         <div class="intro-text">
           <h2>Hvad er der i kalenderen?</h2>
@@ -41,7 +46,8 @@ import "../style/kalender.css";
           <a href="/aboutus" class="btn-outline">Læs mere om os</a>
         </div>
         <div class="intro-calendar">
-          <!-- kalender kommer her -->
+          <!-- kalender -->
+          <img src="/pictures/kalender-filter.svg" class="filter" alt="hero" />
         </div>
       </section>
 
@@ -49,74 +55,76 @@ import "../style/kalender.css";
         <h2 class="h2-hero">Kommende events</h2>
         <div class="cards">
           <EventCard title="Book club" image="/pictures/bogklub.svg" />
-          <EventCard title="Løbe Klubb" image="/pictures/løbeklubb.svg" />
-          <EventCard
-            title="Lanterne aften"
-            image="pictures/lanterneadften.svg"
-          />
+          <EventCard title="Løbe Klubb" image="/pictures/løbeklub.svg" />
+          <EventCard title="Lanterne aften" image="pictures/lanterne.svg" />
         </div>
-        <!-- LYSLØB -->
-        <section class="event-section">
-          <div class="event-text">
-            <h2>Lysløb</h2>
-            <h3>Hvad er det?</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
-              atque sequi fugiat harum officiis quasi eos id, repellendus
-              similique vel ullam delectus natus enim nam deserunt autem ad.
-              Numquam, non? Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Ab dignissimos sed odit qui sint perspiciatis, corporis
-              reiciendis earum enim placeat nemo minima laudantium libero
-              praesentium sapiente fugiat voluptas quasi necessitatibus!
-            </p>
-            <button class="btn-outline">Tilmeld dig her</button>
-          </div>
-          <div class="event-image">
-            <img src="/pictures/løbeklubb.svg" alt="lysløb" />
-          </div>
-        </section>
+      </section>
+      <!-- LYSLØB -->
+      <section class="event-section">
+        <img src="/pictures/blob-en.svg" class="blob" alt="" />
+        <div class="event-text">
+          <h2>Lysløb</h2>
+          <h3>Hvad er det?</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
+            atque sequi fugiat harum officiis quasi eos id, repellendus
+            similique vel ullam delectus natus enim nam deserunt autem ad.
+            Numquam, non? Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Ab dignissimos sed odit qui sint perspiciatis, corporis
+            reiciendis earum enim placeat nemo minima laudantium libero
+            praesentium sapiente fugiat voluptas quasi necessitatibus!
+          </p>
+        </div>
+        <div class="event-image">
+          <img src="/pictures/løbeklub.svg" alt="lysløb" />
+          <button class="btn-outline">Tilmeld dig her</button>
+        </div>
+      </section>
 
-        <section class="event-section reverse">
-          <div class="event-text">
-            <h2>lanterne aften</h2>
-            <h3>Hvad er det?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-              ea laboriosam aliquid dolorem eaque vel iste? Fugiat veniam
-              accusamus tempore nostrum asperiores neque ipsum quibusdam
-              possimus, voluptatem est modi pariatur! Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Sit, reprehenderit odio natus iste
-              ipsum perferendis fuga est quisquam dolores nisi perspiciatis
-              voluptate ipsa. Voluptas ipsam inventore, tempore impedit
-              asperiores dolor!
-            </p>
-            <button class="btn-outline">Tilmeld dig her</button>
-          </div>
-          <div class="event-image">
-            <img src="/pictures/lanterneadften.svg" alt="lanterne" />
-          </div>
-        </section>
+      <section class="event-section reverse">
+        <img src="/pictures/blob-en.svg" class="blob" alt="" />
+        <div class="event-text">
+          <h2>lanterne aften</h2>
+          <h3>Hvad er det?</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ea
+            laboriosam aliquid dolorem eaque vel iste? Fugiat veniam accusamus
+            tempore nostrum asperiores neque ipsum quibusdam possimus,
+            voluptatem est modi pariatur! Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Sit, reprehenderit odio natus iste
+            ipsum perferendis fuga est quisquam dolores nisi perspiciatis
+            voluptate ipsa. Voluptas ipsam inventore, tempore impedit asperiores
+            dolor!
+          </p>
+        </div>
+        <div class="event-image">
+          <img src="/pictures/lanterne.svg" alt="lanterne" />
+          <button class="btn-outline">Tilmeld dig her</button>
+        </div>
+      </section>
 
-        <section class="event-section">
-          <div class="event-text">
-            <h2>Bog klubb</h2>
-            <h3>Hvad er det?</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              distinctio ratione sint consequuntur natus quis inventore!
-              Obcaecati laborum ducimus vel, ipsa nihil, aliquid quis, aperiam
-              nemo doloremque perspiciatis eos qui. Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Modi commodi porro molestiae
-              similique quas nostrum minus cum est, aliquid minima recusandae ad
-              illum voluptatibus, suscipit delectus praesentium, quis enim non.
-            </p>
-            <button class="btn-outline">Tilmeld dig her</button>
-          </div>
-          <div class="event-image">
-            <img src="/pictures/bogklub.svg" alt="bogklub" />
-          </div>
-        </section>
+      <section class="event-section">
+        <img src="/pictures/blob-en.svg" class="blob" alt="" />
+
+        <div class="event-text">
+          <h2>Bog klubb</h2>
+          <h3>Hvad er det?</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            distinctio ratione sint consequuntur natus quis inventore! Obcaecati
+            laborum ducimus vel, ipsa nihil, aliquid quis, aperiam nemo
+            doloremque perspiciatis eos qui. Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Modi commodi porro molestiae similique
+            quas nostrum minus cum est, aliquid minima recusandae ad illum
+            voluptatibus, suscipit delectus praesentium, quis enim non.
+          </p>
+        </div>
+        <div class="event-image">
+          <img src="/pictures/bogklub.svg" alt="bogklub" />
+          <button class="btn-outline">Tilmeld dig her</button>
+        </div>
       </section>
     </main>
+    <Footer />
   </body>
 </html>
