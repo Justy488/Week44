@@ -1,14 +1,20 @@
 ---
-const { title, image } = Astro.props;
+const { title, image, slug } = Astro.props;
 ---
 
-<div class="event-card">
-  <img src={image} alt={title} />
-  <p>{title}</p>
-  <button>Tilmeld dig her</button>
-</div>
+<a href={"/events/" + slug} class="event-card-link">
+  <div class="event-card">
+    <img src={image} alt={title} />
+    <p>{title}</p>
+    <button>Tilmeld dig her</button>
+  </div>
+</a>
 
 <style>
+  .event-card-link {
+    text-decoration: none;
+    color: inherit;
+  }
   .cards {
     display: flex;
     flex-direction: row;
