@@ -146,6 +146,12 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 2em;
+  border-bottom: 2.5px solid #977851;
+}
+.procent-sec {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 2em;
 }
 .third-space {
   grid-template-columns: repeat(2, 1fr);
@@ -167,9 +173,8 @@ h3 {
 
 .fifth-sec {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
   border-bottom: 2.5px solid #977851;
-  padding: 2em;
 }
 
 .last-p {

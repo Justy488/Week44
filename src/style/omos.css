@@ -69,8 +69,8 @@ a {
   padding: 2em 1.5em;
   text-align: center;
   background-color: #fffdf8;
-  border-top: 1.5px solid #977851;
-  border-bottom: 1.5px solid #977851;
+  border-top: 2px solid #977851;
+  border-bottom: 2px solid #977851;
 }
 
 .timeglas-deko {
@@ -138,7 +138,7 @@ a {
   gap: 1.5em;
   background-color: #fffdf8;
   overflow: hidden;
-  border-bottom: 1.5px solid #977851;
+  border-bottom: 2px solid #977851;
 }
 .textboks {
   z-index: 5;
