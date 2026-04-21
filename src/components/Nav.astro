@@ -4,7 +4,7 @@ const { pathname } = Astro.url;
 const navLinks = [
   { title: "Forside", href: "/" },
   { title: "Kalender", href: "/kalender" },
-  { title: "Statistik", href: "/statistik" },
+  { title: "Statistik", href: "/statistic" },
   { title: "Om os", href: "/aboutus" },
 ];
 ---
@@ -114,18 +114,18 @@ const navLinks = [
   .menu a {
     display: block;
     padding: 10px;
-    color: #333333;
+    color: #977851;
     text-decoration: none;
     transition: color 0.3s;
     text-align: end;
   }
 
   .menu a:hover {
-    color: #ff0000;
+    color: #000;
   }
 
   .menu a.active {
-    color: hotpink;
+    color: #95abb0;
   }
 
   .burger {

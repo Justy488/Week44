@@ -5,6 +5,7 @@ import Intro from "../components/Intro.astro";
 import SignUp from "../components/SignUp.astro";
 import FollowUs from "../components/FollowUs.astro";
 import Stats from "../components/Stats.astro";
+import EventCard from "../components/EventCard.astro";
 import "../style/indexstyle.css";
 ---
 
@@ -13,6 +14,9 @@ import "../style/indexstyle.css";
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Poppins:wght@400;600&family=Raleway:wght@400;600&display=swap" rel="stylesheet" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>UGE 44</title>
@@ -48,6 +52,17 @@ import "../style/indexstyle.css";
     <Intro />
     <SignUp />
     <Stats />
+    <section class="upcoming">
+      <h2 class="h2-hero">Kommende events</h2>
+      <div class="cards">
+        <EventCard title="Book club" image="/pictures/bogklub.svg" />
+        <EventCard title="Løbe Klubb" image="/pictures/løbeklub.svg" />
+        <EventCard title="Lanterne aften" image="pictures/lanterne.svg" />
+      </div>
+      <div class="eventbtn-center">
+        <a href="/kalender" class="eventbtn">Gå til kalender</a>
+      </div>
+    </section>
     <FollowUs />
     <Footer />
   </body>
