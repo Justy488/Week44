@@ -9,13 +9,14 @@ const { title, image } = Astro.props;
 </div>
 
 <style>
-
   .cards {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 40px;
+    flex-wrap: wrap;
   }
+
   .event-card {
     display: flex;
     flex-direction: column;
@@ -34,22 +35,22 @@ const { title, image } = Astro.props;
     height: 200px;
   }
   .event-card h3 {
-    font-size: 2rem;
+    font-size: 3em;
     font-weight: normal;
     font-family: Georgia, serif;
     margin: 0;
   }
 
   .event-card p {
-    font-size: 0.95rem;
+    font-size: 2rem;
     color: #000000;
     text-align: center;
     margin: 0;
   }
 
   .event-card button {
-    border: 2px solid #b8965a;
-    background: transparent;
+    border: 3px solid #b8965a;
+    background-color: #fbfbe7;
     padding: 10px 30px;
     border-radius: 30px;
     cursor: pointer;
