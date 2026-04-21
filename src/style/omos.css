@@ -131,7 +131,28 @@ a {
   z-index: 0;
   pointer-events: none;
 }
-
+.shape-højre {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+.info-1 {
+  line-height: 24px;
+  width: 400px;
+}
+.info-2 {
+  line-height: 24px;
+  width: 450px;
+  justify-self: center;
+}
+.info-3 {
+  line-height: 24px;
+  width: 450px;
+  justify-self: end;
+}
 /* tablets eller letter større skærme (800px+) */
 @media (min-width: 800px) {
   .header {
@@ -161,40 +182,6 @@ a {
     justify-self: center;
   }
 }
-
-/* .team-grid {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .team-member {
-    flex: 1 1 200px;
-    max-width: 280px;
-  }
-
-  .info {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 2em 3em;
-  }
-
-  .info-1,
-  .info-2,
-  .info-3 {
-    flex: 1 1 250px;
-  }
-  .timeglas-venstre-mobil,
-  .timeglas-højre-mobil {
-    display: none;
-  }
-  .timeglas-deko {
-    display: block;
-    width: 100px;
-    height: auto;
-    align-self: center;
-  }
-} */
 
 /* DESKTOP større end (1024px+) */
 @media (min-width: 1024px) {
