@@ -210,10 +210,10 @@ a {
     min-height: 50%;
   }
   .timeglas {
-    width: 100%;
+    width: 70%;
   }
   .liljer {
-    width: 85%;
+    width: 65%;
   }
   .venstre-side {
     margin-left: 7em;
@@ -221,7 +221,7 @@ a {
   }
 
   .header-text {
-    font-size: 24px;
+    font-size: 20px;
     width: 510px;
     margin-top: -2em;
   }
