@@ -1,5 +1,5 @@
 ---
-import Header from "../components/Nav.astro";
+import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 ---
 
@@ -8,61 +8,96 @@ import Footer from "../components/Footer.astro";
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="src/style/omos.css" />
     <title>OM OS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Poppins:wght@400;600&family=Raleway:wght@400;600&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <Header />
-    <section class="header">
-    <img src="#" />
-      <img src="#" />
-      <p>Landsforeningen Liv&Død arbejder for at starte den gode samtale og nedbryde tabuet om døden.</p>
-    </section>
+    <Nav />
+
+    <main class="header">
+      <div class="venstre-side">
+        <img class="timeglas" src="pictures/omos-titel.png" alt="OM OS med timeglas i baggrund" />
+        <p class="header-text">Landsforeningen Liv&amp;Død arbejder for at starte den gode samtale og nedbryde tabuet om døden.</p>
+      </div>
+      <div class="liljer-position">
+        <img class="liljer" src="pictures/liljer.png" alt="Et billede af liljer" />
+      </div>
+    </main>
 
     <section class="team-info">
       <h2>Mød vores medarbejdere!</h2>
-      <div>
-        <p>Vibeke Sonntag Larsen</p>
-<!-- billede af vibeke -->
-        <p>Sekretariatschef</p>
-        <p>vsl@livogdoed.dk</p>
-        <p>2533 3625</p>
-      </div>
-     
-      <div>
-        <p>Nanna De Hemmer Widding</p>
-<!-- billede af vibeke -->
-        <p>Kultur- og udviklingskonsulent</p>
-        <p>nhw@livogdoed.dk</p>
-        <p>23336 4978</p>
-      </div>
-       
-      <div>
-        <p>Eva Gerlif Myrtue</p>
-<!-- billede af vibeke -->
-        <p>Kommunikations- og udviklingskonsulent</p>
-        <p>emy@livogdoed.dk</p>
-        <p>3336 4982</p>
-      </div>
-    </section>
-    <section class="info">
-        <div class="info-1">
-            <h3>Vores historie</h3>
-            <p>Landsforeningen Liv&Død har en lang historie.
-               Oprindeligt blev foreningen stiftet som Dansk Ligbrændingsforening i 1881.</p>
-            <p>Formålet var at kæmpe for at få ligbrænding lovliggjort, hvilket lykkedes.</p>
-            <p>I år 2001 skiftede Dansk Ligbrændingsforening navn til Landsforeningen Liv&Død og fik et nyt formål: At nedbryde tabuet om døden og sikre en værdig afsked med livet.</p>
+      <div class="team-grid">
+        <img class="timeglas-deko" src="pictures/venstre-timeglas.png" alt="" />
+
+        <div class="team-member">
+          <p class="navn">Vibeke Sonntag Larsen</p>
+          <div class="billede-row">
+            <img class="timeglas-venstre-mobil" src="pictures/venstre-timeglas.png" alt="" />
+            <img class="portræt" src="pictures/vibeke-desktop.png" alt="Vibeke Sonntag Larsen" />
+            <img class="timeglas-højre-mobil" src="pictures/højre-timeglas.png" alt="" />
+          </div>
+          <p class="titel">Sekretariatschef</p>
+          <a href="mailto:vsl@livogdoed.dk">vsl@livogdoed.dk</a>
+          <p>2533 3625</p>
         </div>
 
-        <div class="info-2">
-        <h3>Som forening arbejder vi for at:</h3>
-        <p>Give mennesker mulighed for at træffe beslutninger om døden og den sidste tid på et oplyst grundlag samt at starte den gode samtale om døden og en værdig afsked. Dette gør vi blandt andet ved at facilitere samtaler om døden både på uddannelsesniveau og i den brede befolkning gennem oplysningsarbejde.</p>
+        <div class="team-member">
+          <p class="navn">Nanna de Hemmer Widding</p>
+          <div class="billede-row">
+            <img class="timeglas-venstre-mobil" src="pictures/venstre-timeglas.png" alt="" />
+            <img class="portræt" src="pictures/nanna-desktop.png" alt="Nanna de Hemmer Widding" />
+            <img class="timeglas-højre-mobil" src="pictures/højre-timeglas.png" alt="" />
+          </div>
+          <p class="titel">Kultur- og udviklingskonsulent</p>
+          <a href="mailto:nhw@livogdoed.dk">nhw@livogdoed.dk</a>
+          <p>3336 4978</p>
         </div>
-        <div class="info-3"">
-            <p>Derudover oplyser vi om praktiske forhold i forbindelse med dødsfald og afholder udstillinger og arrangementer, som sætter fokus på døden i et personligt, kulturhistorisk og kunstnerisk perspektiv.</p>
+
+        <div class="team-member">
+          <p class="navn">Eva Gerlif Myrtue</p>
+          <div class="billede-row">
+            <img class="timeglas-venstre-mobil" src="pictures/venstre-timeglas.png" alt="" />
+            <img class="portræt" src="pictures/eva-desktop.png" alt="Eva Gerlif Myrtue" />
+            <img class="timeglas-højre-mobil" src="pictures/højre-timeglas.png" alt="" />
+          </div>
+          <p class="titel">Kommunikations- og udviklingskonsulent</p>
+          <a href="mailto:emy@livogdoed.dk">emy@livogdoed.dk</a>
+          <p>3336 4982</p>
         </div>
+
+        <img class="timeglas-deko" src="pictures/højre-timeglas.png" alt="" />
+      </div>
     </section>
+
+    <section class="info">
+      <img src="pictures/venstre-timeglas.png" class="shape shape-venstre" alt="Timeglas dekoration" />
+      <img src="pictures/højre-timeglas.png" class="shape shape-højre" alt="Timeglas dekoration" />
+      <div class="textboks">
+        <div class="info-1">
+          <h3>Vores historie</h3>
+          <p>
+            Landsforeningen Liv&amp;Død har en lang historie. Oprindeligt blev foreningen stiftet som Dansk Ligbrændingsforening i 1881. Formålet var at kæmpe for at få ligbrænding lovliggjort, hvilket lykkedes. I år 2001 skiftede Dansk
+            Ligbrændingsforening navn til Landsforeningen Liv&amp;Død og fik et nyt formål: At nedbryde tabuet om døden og sikre en værdig afsked med livet.
+          </p>
+        </div>
+        <div class="info-2">
+          <h3>Som forening arbejder vi for at:</h3>
+          <p>
+            Give mennesker mulighed for at træffe beslutninger om døden og den sidste tid på et oplyst grundlag samt at starte den gode samtale om døden og en værdig afsked. Dette gør vi blandt andet ved at facilitere samtaler om døden både på
+            uddannelsesniveau og i den brede befolkning gennem oplysningsarbejde.
+          </p>
+        </div>
+        <div class="info-3">
+          <p>Derudover oplyser vi om praktiske forhold i forbindelse med dødsfald og afholder udstillinger og arrangementer, som sætter fokus på døden i et personligt, kulturhistorisk og kunstnerisk perspektiv.</p>
+        </div>
+      </div>
+    </section>
+
     <Footer />
   </body>
 </html>

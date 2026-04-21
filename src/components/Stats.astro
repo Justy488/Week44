@@ -1,0 +1,188 @@
+<section class="stats">
+  <div class="stats-content">
+    <h2 class="title">Statistics</h2>
+
+    <div class="stat-circle">41%</div>
+
+    <h3>HAR I NOGEN GRAD TALT OM DØDEN</h3>
+
+    <p>Mange taler kun i begrænset grad om døden. Derfor skaber vi et rum, hvor samtalen kan begynde.</p>
+
+    <a href="/statistik" class="btn">Se alle stats <span>→</span></a>
+
+    <img src="/pictures/peoplegraf01.png" alt="Statistik kort" class="stat-card mobile-card" />
+  </div>
+
+  <img src="/pictures/peoplegraf01.png" alt="Statistik kort" class="stat-card desktop-card" />
+  <img src="/pictures/hourglassshape.png" alt="" class="decor-shape" />
+</section>
+
+<style>
+  .stats {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border-top: 2px solid #a67c44;
+    border-bottom: 2px solid #a67c44;
+    padding: 50px 24px 60px;
+  }
+
+  .stats-content {
+    position: relative;
+    z-index: 2;
+    max-width: 420px;
+  }
+
+  .title {
+    font-size: 4rem;
+    line-height: 0.95;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
+  .stat-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #c0dae0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 auto 2rem;
+    font-family: "Raleway", sans-serif;
+  }
+
+  h3 {
+    color: #9b7442;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.4;
+    max-width: 320px;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.9rem 1.3rem;
+    background: #c0dae0;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .btn:hover {
+    background: #ebfbff;
+    color: #000;
+  }
+
+  .stat-card {
+    display: block;
+    max-width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    position: relative;
+    z-index: 2;
+  }
+
+  .desktop-card {
+    display: none;
+  }
+
+  .mobile-card {
+    width: 290px;
+    margin-top: 2rem;
+  }
+
+  .decor-shape {
+    position: absolute;
+    right: -120px;
+    top: 0;
+    width: 430px;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  @media screen and (min-width: 900px) {
+    .stats {
+      min-width: 900px;
+      min-height: 500px;
+      display: grid;
+      grid-template-columns: 52% 48%;
+      align-items: start;
+      padding: 70px 90px 70px 80px;
+    }
+
+    .stats-content {
+      max-width: 560px;
+      margin: 0;
+    }
+
+    .title {
+      font-size: 5rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .stat-circle {
+      width: 160px;
+      height: 160px;
+      font-size: 4.5rem;
+      margin: 0 0 2.2rem 8.5rem;
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      max-width: 500px;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      max-width: 420px;
+      margin-bottom: 2rem;
+      line-height: 1.45;
+      font-size: 1.15rem;
+    }
+
+    .btn {
+      font-size: 1.2rem;
+      padding: 1rem 1.6rem;
+      background: #c0dae0;
+    }
+
+    .mobile-card {
+      display: none;
+    }
+
+    .stats-right {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+    }
+
+    .desktop-card {
+      display: block;
+      width: 500px;
+      padding-top: 80px;
+    }
+
+    .decor-shape {
+      right: -30px;
+      top: 0;
+      width: 560px;
+      height: 100%;
+    }
+  }
+</style>

@@ -54,12 +54,6 @@ p, a{
     font-family: "Raleway", sans-serif;
 }
 /* TEXT*/
-
-/* .gradient-baggrund {
-    background: linear-gradient(to right, #FFFDF8 0%, #FFFDF8 40%, #FBFBE7 80%, #FBFBE7 100%);
-    padding: 20px;
-    border-radius: 8px; 
-} */
 .intro {
   display: flex;
   justify-content: space-between;
