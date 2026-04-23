@@ -16,7 +16,7 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-    border-bottom: 2px solid #d4c5b0;
+  border-bottom: 2px solid #d4c5b0;
 }
 
 .hero img {
@@ -50,15 +50,16 @@ h3 {
   color: #977851;
 }
 
-p,
+/* p,
 a {
   font-size: 1.6em;
   line-height: 1.5em;
+  font-family: "Raleway", sans-serif; */
+p,
+a {
+  font-size: 1.2em;
+  line-height: 1.5em;
   font-family: "Raleway", sans-serif;
-p, a{
-    font-size: 1.2em;
-    line-height: 1.5em;
-    font-family: "Raleway", sans-serif;
 }
 /* TEXT*/
 .intro {
@@ -67,10 +68,8 @@ p, a{
   align-items: center;
   padding: 60px 80px;
   gap: 40px;
-    border-bottom: 2px solid #d4c5b0;
-
+  border-bottom: 2px solid #d4c5b0;
 }
-
 
 /* KOMMENDE EVENTS */
 .upcoming {
@@ -111,8 +110,6 @@ p, a{
   border-radius: 12px;
 }
 
-
-
 /* KNAPPER */
 .btn-outline {
   display: inline-block;
@@ -130,12 +127,10 @@ p, a{
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .scroll-btn {
   display: inline-block;
   border: 5px solid #a8c0c8;
-  padding: 8px 60px;
+  padding: 8px 30px;
   border-radius: 30px;
   text-decoration: none;
   color: #7a9dab;
@@ -150,7 +145,7 @@ p, a{
 
 .event-section {
   border-top: 2px solid #d4c5b0;
-    border-bottom: 2px solid #d4c5b0;;
+  border-bottom: 2px solid #d4c5b0;
 }
 
 .event-section {
